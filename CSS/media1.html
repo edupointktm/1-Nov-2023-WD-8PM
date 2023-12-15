@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contianer{
+            display: flex;
+            height: 500px;
+            /* justify-content: space-evenly; */
+        }
+        .left-sidebar{
+            width: 300px;
+           
+            background-color: green;
+        }
+        .content-area{
+            background-color: purple;
+            width: 100%;
+        }
+        .bar-cont{
+            display: none;
+        }
+        .bars{
+            position: absolute;
+            right:100px;
+            top:50px;
+
+            color: white;
+            font-size: 35px;
+
+            display: none;
+        }
+        @media screen and (max-width:700px) {
+            .left-sidebar{
+                display: none;
+            }       
+
+            .content-area{
+                background-color: darkcyan;
+            }
+            .bar-cont{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="left-sidebar">Left Sidebar</div>
+        <div class="content-area">Content Area</div>
+        <div class="bar-cont"><i class="fa-solid fa-bars bars" ></i></div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/689e11689f.js" crossorigin="anonymous"></script>
+</body>
+</html>

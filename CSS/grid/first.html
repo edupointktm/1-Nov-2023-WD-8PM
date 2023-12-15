@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            background-color: gainsboro;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 50px 800px;
+
+            gap:5px;
+            
+
+            flex-flow: row wrap;
+        }
+
+        .box{
+            /* width: 100px;
+            height: 100px; */
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+        <div class="box">Four</div>
+        <div class="box">Four</div>
+        <div class="box">Four</div>
+        <div class="box">Four</div>
+        
+    </div>
+</body>
+</html>
