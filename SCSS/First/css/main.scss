@@ -1,0 +1,45 @@
+@import 'variable.scss';
+
+.font-size{
+    font-size: 16px;
+}
+@mixin abc( ) {
+    color: $white;
+    background-color: $bg;
+    
+    font-size: $fs;
+}
+
+h1 {
+    color: $secondary-color;
+    @extend .font-size
+
+}
+
+@import 'header.scss';
+
+section {
+    .container {
+        display: flex;
+        gap: 5px+15px;
+
+        .left {
+            // @include abc(1, green)
+            background-color: darkcyan;
+            flex-basis: 100px;
+        }
+
+        .middle {
+            // @include abc(3)
+            background-color: darkcyan;
+            flex-basis: 150px;
+        }
+
+        .right {
+
+            // @include abc(1, blue,)
+            background-color: darkcyan;
+            flex-basis: 250px;
+        }
+    }
+}

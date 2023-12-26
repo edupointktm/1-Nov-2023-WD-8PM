@@ -1,0 +1,60 @@
+.font-size, h1 {
+  font-size: 16px;
+}
+
+h1 {
+  color: orange;
+}
+
+.box, header .logo {
+  width: 500px;
+  height: 150px;
+  background-color: blue;
+}
+
+header {
+  background-color: rgb(139, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 22px;
+  color: white;
+}
+header .logo span {
+  color: yellow;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+header nav ul li {
+  padding: 10px 20px;
+}
+header nav ul li:hover {
+  background-color: orange;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+section .container {
+  display: flex;
+  gap: 20px;
+}
+section .container .left {
+  background-color: darkcyan;
+  flex-basis: 100px;
+}
+section .container .middle {
+  background-color: darkcyan;
+  flex-basis: 150px;
+}
+section .container .right {
+  background-color: darkcyan;
+  flex-basis: 250px;
+}/*# sourceMappingURL=main.css.map */
