@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Boradway</title>
+</head>
+
+<body>
+    <button onclick="changeTitle()">Change Title</button>  
+    <button onclick="ChangeColorRed()">Color Red</button>
+    <div id="cont">
+        <h1 id="h1">Set Title Name : <span id=tittle>Hari Om</span></h1>
+
+    </div>
+
+    <tittle>Prabhat</tittle>
+    <hr>
+    <div>Enter Your Number : <input type="text" id="number"> <button onclick="oddEven()">Result</button> <span id="result"></span></div>
+    <script>
+        function changeTitle() {
+            var get_title = document.querySelector('#tittle').innerText
+            
+            document.title=get_title
+        }
+
+        function ChangeColorRed(){
+            document.querySelector('#tittle').style.color="red";
+        }
+
+        oddEven = ()=>{
+            var num = document.querySelector("#number").value
+            rem = parseInt(num)%2
+            if(rem==0){
+                msg = `${num} is EVEN number`
+            }
+            else{
+                msg=`${num} is ODD number`
+            }
+
+            document.querySelector('#result').innerText = msg
+        }
+    </script>
+</body>
+
+</html>
