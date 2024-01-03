@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hide{
+            display: none;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <button onclick="onOFF()" id="on-off">ON</button>
+    <button id="hide" onclick="document.querySelector('.bulb').classList.add('hide')">Hide</button>
+    <button onclick="document.querySelector('.bulb').classList.remove('hide')">Show</button>
+    <button onclick="document.querySelector('.bulb').classList.toggle('hide') ">Hide/How</button>
+    <button>Hide</button>
+
+    <br><br>
+
+
+    <img src="https://prabhatmallik.com.np/dom/image/OFF.jpg" class="bulb " width="25%" alt="">
+    <script>
+        onOFF = ()=>{
+            var get_value = document.querySelector('#on-off').innerHTML
+            if(get_value=="ON"){
+                document.querySelector('#on-off').innerHTML = "OFF" 
+                document.querySelector('.bulb').src="https://prabhatmallik.com.np/dom/image/ON.jpg"
+            }
+            else{
+                document.querySelector('#on-off').innerHTML="ON"
+                document.querySelector('.bulb').src="https://prabhatmallik.com.np/dom/image/OFF.jpg"
+            }
+
+            
+        }
+
+        
+    </script>
+</body>
+</html>
