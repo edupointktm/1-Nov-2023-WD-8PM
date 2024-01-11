@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: yellow;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="hide-show">Hide/Show</button>
+
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadein-out">Fade In Out</button>
+
+    <button id="slide-up">Slid Up</button>
+    <button id="slide-down">Slide Down</button>
+    <button id="slide-up-down">Fade Up/Down</button>
+    <input type="text" id="txt-cont">
+    <br>
+    <h1 id="cont"> BROADWAY INFOSYS</h1> <br>
+    <!-- <h1> Prabha    t Kumar Mallik</h1> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#hide').click(function () {
+
+            $('#cont').hide()
+
+        })
+
+        $('#show').click(function () {
+            $('#cont').show()
+        })
+
+        $('#hide-show').click(function () {
+            $('#cont').toggle(3000)
+        })
+
+        $('#fadein').click(function () {
+            $('#cont').fadeIn(3000)
+        })
+
+        $('#fadeout').click(function () {
+            $('#cont').fadeOut(3000)
+        })
+
+        $('#fadein-out').click(function () {
+            $('#cont').fadeToggle(3000)
+        })
+
+        $('#slide-up').click(function () {
+            $('#cont').slideUp(5000)
+        })
+
+        $('#slide-down').click(function () {
+            $('#cont').slideDown(2000)
+        })
+
+        $('#slide-up-down').click(function () {
+            $('#cont').slideToggle(2000)
+        })
+
+        $('#cont').mouseover(function () {
+            $(this).css('background-color', 'green')
+        })
+
+        $('#cont').mouseleave(function () {
+            $(this).css('background-color', "blue")
+            $(this).css('color', "white")
+        })
+
+        $('#cont').click(function () {
+            $(this).css('background-color', 'red')
+        })
+
+        $('#txt-cont').keyup(function(){
+            var get_value = $(this).val()
+            $('#cont').html(get_value)
+        })
+    </script>
+</body>
+
+</html>

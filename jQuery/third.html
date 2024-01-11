@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: darkcyan;
+            /* line-height: 250px; */
+            text-align: center;
+            color: white;
+        }
+        h1{
+            border: 1px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <button id="append">Append</button> <button id="prepend">Prepend</button> 
+    <button id="after">After</button> <button id="before">Before</button> 
+    <br><br>
+    <div id="box">
+        <h1>Broadway</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        $('#append').click(function(){
+            $('#box').append("Tinkune")
+            console.log('hi')
+        })
+
+        $('#prepend').click(function(){
+            $('#box').prepend("Welcome")
+            console.log('hi')
+        })
+
+        $('#after').click(function(){
+            $('#box').after("Welcome")
+            console.log('hi')
+        })
+
+        $('#before').click(function(){
+            $('#box').before("Welcome")
+            console.log('hi')
+        })
+    </script>
+</body>
+</html>

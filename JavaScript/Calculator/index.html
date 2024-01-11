@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .flex{
+            display: flex;
+            gap: 25px;
+            margin: 25px 25px 0 25px;
+
+        }
+        .calculator{
+            width: 285px;
+            height: 340px;
+            background-color: black ;
+            border-radius: 25px;
+            
+        }
+        .box{
+            
+            padding: 15px 0 0 15px;
+
+        }
+        .box .inp{
+            font-size: 20px;
+            font-weight: 300;
+            border-radius: 25px;
+        }
+        .btn{
+            
+            padding: 6px 12px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px rgb(136, 136, 136);
+            
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="color-pic">
+        <label for="">BG</label><input type="color" id="color" onchange="bgChange()">
+    </div>
+    <br>
+    <div class="Seventh">
+        <div class="calculator">
+            <div class="box">
+                <input type="text" class="inp">
+            </div>
+    
+            <div class="row flex">
+                <div class="col">
+                    <button class="btn" value="7">7</button>
+                </div>            
+                <div class="col">
+                    <button class="btn" value="8">8</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="9">9</button>                             
+                </div>
+                <div class="col">
+                    <button class="btn" value="/">/</button>
+                </div>
+            </div>
+    
+            <div class="row flex">
+                <div class="col">
+                    <button class="btn" value="4">4</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="5">5</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="6">6</button>                             
+                </div>
+                <div class="col">
+                    <button class="btn" value="*">*</button>
+                </div>
+            </div>
+    
+            <div class="row flex">
+                <div class="col">
+                    <button class="btn" value="1" onclick="document.querySelector('.inp').value +='1'">1</button>
+                </div>           
+                <div class="col">
+                    <button class="btn" value="2" onclick="document.querySelector('.inp').value +='2'">2</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="3" onclick="document.querySelector('.inp').value +='3'">3</button>                             
+                </div>
+                <div class="col">
+                    <button class="btn" value="-" onclick="document.querySelector('.inp').value +='-'">-</button>
+                </div>
+            </div>
+    
+            <div class="row flex">
+                <div class="col">
+                    <button class="btn" value="C" onclick="document.querySelector('.inp').value=''">C</button>                             
+                </div>
+                <div class="col">
+                    <button class="btn" value="0" onclick="document.querySelector('.inp').value +='0'">0</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="=" onclick="calculation()">=</button>
+                </div>
+                <div class="col">
+                    <button class="btn" value="+" onclick="document.querySelector('.inp').value +='+'">+</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <script>
+        calculation=()=>{
+            var get_value= document.querySelector('.inp').value;
+            document.querySelector('.inp').value= eval(get_value) ;
+        }
+
+        bgChange=()=>{
+            var c = document.querySelector('#color').value
+            // console.log(c)
+            document.querySelector('.inp').style.backgroundColor= c;
+        }
+    </script>
+</body>
+</html>
