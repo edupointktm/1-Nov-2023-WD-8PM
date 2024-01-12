@@ -1,15 +1,33 @@
 import React from 'react'
+import Home from './Home'
+import { Routes, Route } from 'react-router-dom'
+import About from './About'
+import Contact from './Contact'
+import Gallery from './Gallery'
+import Course from './Course'
+import Shop from './Shop'
+import Page_not_found from './Page_not_found'
 
 function Section() {
     return (
+       
         <>
-            <section className="content">
-                <div className="cont">
-                    <h1>Home</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque officia facere eligendi et ipsum vero sapiente labore cum, libero eum veniam pariatur suscipit delectus corporis, temporibus ea, veritatis harum aperiam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam modi eius dolorum. Impedit amet quo beatae dolorem, porro non quae corrupti commodi! Maiores aspernatur officia harum rerum dolorem perspiciatis assumenda.</p>
-                </div>
-            </section>
+          
+          
+            <Routes>
+
+                <Route path="/" element={<Home/>}></Route>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/gallery" element={<Gallery/>}/>
+                <Route path="/course" element={<Course/>}/>
+                <Route path="/shop" element={<Shop/>}/>
+                <Route path="*" element={<Page_not_found/>}/>
+            </Routes>
+          
+          
         </>
+        
     )
 }
 
