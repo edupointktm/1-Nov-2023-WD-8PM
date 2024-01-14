@@ -1,16 +1,19 @@
 import React from 'react'
+import Slider from './Slider';
 
 function Home() {
+  
+
   return (
     <>
-    <section className="content">
-                <div className="cont">
-                    <h1>Home</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque officia facere eligendi et ipsum vero sapiente labore cum, libero eum veniam pariatur suscipit delectus corporis, temporibus ea, veritatis harum aperiam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam modi eius dolorum. Impedit amet quo beatae dolorem, porro non quae corrupti commodi! Maiores aspernatur officia harum rerum dolorem perspiciatis assumenda.</p>
-                </div>
-            </section>
+      <Slider />
+      <div className="container">
+
+        <h1>HOME</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi voluptatem doloribus, nisi iste in dignissimos dolore provident aliquid, fugiat delectus, iure pariatur illum perferendis libero quia impedit consequatur sequi distinctio.</p>
+      </div>
     </>
-  )
+  );
 }
 
 export default Home
